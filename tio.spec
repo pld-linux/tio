@@ -26,7 +26,7 @@ serial TTY devices for basic I/O operations.
 
 %build
 %meson build \
-    -Dbashcompletiondir=%{bash_compdir}
+	-Dbashcompletiondir=%{bash_compdir}
 
 %ninja_build -C build
 
