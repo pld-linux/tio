@@ -7,9 +7,13 @@ Group:		Applications/Communications
 Source0:	https://github.com/tio/tio/releases/download/v%{version}/%{name}-%{version}.tar.xz
 # Source0-md5:	3945990ddbd7d7b46bf47a7be0af84ae
 URL:		https://github.com/tio/tio
-BuildRequires:	meson
+BuildRequires:	inih-devel
+BuildRequires:	linux-libc-headers >= 7:2.6.20
+BuildRequires:	meson >= 0.53.2
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.726
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
