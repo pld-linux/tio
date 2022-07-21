@@ -11,7 +11,7 @@ BuildRequires:	inih-devel
 BuildRequires:	linux-libc-headers >= 7:2.6.20
 BuildRequires:	meson >= 0.53.2
 BuildRequires:	ninja
-BuildRequires:	rpmbuild(macros) >= 1.726
+BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
