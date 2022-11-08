@@ -1,16 +1,17 @@
 Summary:	A simple serial device I/O tool
 Name:		tio
-Version:	1.47
+Version:	2.3
 Release:	1
 License:	GPL v2+
 Group:		Applications/Communications
 Source0:	https://github.com/tio/tio/releases/download/v%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	406869cf7b5a18ab4f4a845c961b2225
+# Source0-md5:	bfb5cf76a94f759889328c32ffbade34
 URL:		https://github.com/tio/tio
 BuildRequires:	inih-devel
 BuildRequires:	linux-libc-headers >= 7:2.6.20
 BuildRequires:	meson >= 0.53.2
 BuildRequires:	ninja
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
@@ -20,6 +21,16 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 tio is a simple serial device tool which features a straightforward
 command-line and configuration file interface to easily connect to
 serial TTY devices for basic I/O operations.
+
+%package -n bash-completion-tio
+Summary:	bash-completion for tio
+Group:		Applications/Shells
+Requires:	%{name} = %{version}-%{release}
+Requires:	bash-completion >= 1:2.0
+BuildArch:	noarch
+
+%description -n bash-completion-tio
+bash-completion for tio.
 
 %prep
 %setup -q
@@ -43,4 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS README.md TODO
 %attr(755,root,root) %{_bindir}/tio
 %{_mandir}/man1/tio.1*
-# %{bash_compdir}/%{name}
+
+%files -n bash-completion-tio
+%defattr(644,root,root,755)
+%{bash_compdir}/tio
