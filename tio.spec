@@ -11,6 +11,7 @@ BuildRequires:	inih-devel
 BuildRequires:	linux-libc-headers >= 7:2.6.20
 BuildRequires:	meson >= 0.53.2
 BuildRequires:	ninja
+BuildRequires:	pkgconfig
 BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
