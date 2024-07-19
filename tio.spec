@@ -1,11 +1,11 @@
 Summary:	A simple serial device I/O tool
 Name:		tio
-Version:	3.5
+Version:	3.6
 Release:	1
 License:	GPL v2+
 Group:		Applications/Communications
 Source0:	https://github.com/tio/tio/releases/download/v%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	104ca0eb7c6eb2c97dd71e277772cef4
+# Source0-md5:	d94c125f6510dc0fdb3b6079365bd918
 URL:		https://github.com/tio/tio
 BuildRequires:	glib2-devel
 BuildRequires:	linux-libc-headers >= 7:2.6.20
